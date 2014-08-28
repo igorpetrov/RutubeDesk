@@ -1,0 +1,33 @@
+{
+    "browser_action": {
+        "default_icon": "img/logo.png",
+        "default_popup": "popup.html",
+        "default_title": "Administrate site"
+    },
+    "content_scripts": [{
+        "js": [
+            "js/keycatcher.js",
+            "js/jquery.min.js"
+        ],
+        "matches": ["*://*/*"]
+    }],
+    "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
+    "description": "Tool for Rutube editors and administrators",
+    "icons": {
+        "128": "img/icon128.png",
+        "clean": "img/logo_clean.png"
+    },
+    "manifest_version": 2,
+    "minimum_chrome_version": "18",
+    "name": "RutubeDesk",
+    "options_page": "options.html",
+    "permissions": [
+        "*://*.rutube.ru/*",
+        "*://rutube.ru/*",
+        "browsingData",
+        "tabs",
+        "webRequest"
+    ],
+    "update_url": "https://clients2.google.com/service/update2/crx",
+    "version": "0.5"
+}
