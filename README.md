@@ -1,2 +1,2 @@
 # RutubeDesk
-Chrome App for Rutube editiors.
+Chrome Extension for Rutube editors.
